@@ -17,7 +17,7 @@ from accounts.models import UserLibraryAccount
 from .constants import DEPOSIT
 from .forms import DepositForm
 # Create your views here.
-# Create your views here.
+
 
 def send_transaction_email(user, amount, subject, template):
     message = render_to_string(template, {
