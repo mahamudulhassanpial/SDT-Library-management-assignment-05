@@ -7,6 +7,7 @@ from .constants import  GENDER_TYPE
 class UserLibraryAccount(models.Model):
     user = models.OneToOneField(User, related_name='account', on_delete=models.CASCADE)
     # account_type = models.CharField(max_length=10, choices=ACCOUNT_TYPE)
+    email = models.EmailField(null=True)
     account_no = models.IntegerField(unique=True) # account no duijon user er kokhono same hobe na
     birth_date = models.DateField(null=True, blank=True)
     gender = models.CharField(max_length=10, choices=GENDER_TYPE)
