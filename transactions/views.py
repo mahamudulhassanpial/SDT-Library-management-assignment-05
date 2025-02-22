@@ -24,7 +24,7 @@ def send_transaction_email(user, amount, subject, template):
         'user' : user,
         'amount': amount,
     })
-    send_email = EmailMultiAlternatives(subject, '', to=[user.user.email])
+    send_email = EmailMultiAlternatives(subject, '', to=[user.account.email])
     send_email.attach_alternative(message, "text/html")
     send_email.send()
 
